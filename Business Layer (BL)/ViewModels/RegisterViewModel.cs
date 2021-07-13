@@ -19,5 +19,10 @@ namespace Business_Layer__BL_.ViewModels
         [Required]
         [DataType(DataType.Password)]
         public string PasswordHash { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Compare("PasswordHash")]
+        public string ConfirmPassword { get; set; } //ConfirmPassword
     }
 }
