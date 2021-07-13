@@ -43,8 +43,8 @@
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -58,35 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityClass.cs" />
-    <Compile Include="Migrations\202107112129091_v1.cs" />
-    <Compile Include="Migrations\202107112129091_v1.Designer.cs">
-      <DependentUpon>202107112129091_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107121810375_v2.cs" />
-    <Compile Include="Migrations\202107121810375_v2.Designer.cs">
-      <DependentUpon>202107121810375_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107131224317_v3.cs" />
-    <Compile Include="Migrations\202107131224317_v3.designer.cs">
-      <DependentUpon>202107131224317_v3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107112129091_v1.resx">
-      <DependentUpon>202107112129091_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107121810375_v2.resx">
-      <DependentUpon>202107121810375_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107131224317_v3.resx">
-      <DependentUpon>202107131224317_v3.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

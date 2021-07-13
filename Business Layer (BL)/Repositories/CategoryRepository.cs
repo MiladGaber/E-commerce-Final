@@ -19,20 +19,20 @@ namespace Business_Layer__BL_.Repositories
         }
         #region CRUB
 
-        public List<Category> GetAllOrder()
+        public List<Category> GetAllCategory()//name modified to GetAllCategory ...mark
         {
             return GetAll().ToList();
         }
 
-        public bool InsertOrder(Category category)
+        public bool InsertCategory(Category category)
         {
             return Insert(category);
         }
-        public void UpdateOrder(Category category)
+        public void UpdateCategory(Category category)
         {
             Update(category);
         }
-        public void DeleteOrder(int id)
+        public void DeleteCategory(int id)
         {
             Delete(id);
         }
