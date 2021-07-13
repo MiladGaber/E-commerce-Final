@@ -13,6 +13,7 @@ namespace Business_Layer__BL_.ViewModels
         public int Id { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]//...mark
         public string date { get; set; }
         public string description { get; set; }
         public int totalPrice { get; set; } 
