@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.Repositories
 {
+    //created by ...mark
     class AccountRepository
     {
         AppUserManager manager;
@@ -33,4 +34,5 @@ namespace Business_Layer__BL_.Repositories
             IdentityResult result = manager.AddToRole(userid, rolename);
             return result;
         }
+    }
 }
