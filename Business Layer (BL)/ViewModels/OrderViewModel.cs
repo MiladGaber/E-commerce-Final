@@ -16,6 +16,7 @@ namespace Business_Layer__BL_.ViewModels
         [DataType(DataType.Date)]//...mark
         public string date { get; set; }
         public string description { get; set; }
+        [DataType(DataType.Currency)]//...mark
         public int totalPrice { get; set; } 
         public int? discount { get; set; }
         public ICollection<product> product { get; set; }

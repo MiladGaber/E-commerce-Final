@@ -61,9 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppServices\AccountAppService.cs" />
+    <Compile Include="AppServices\CategoryAppService.cs" />
+    <Compile Include="AppServices\OrderAppSevice.cs" />
+    <Compile Include="AppServices\ProductAppService.cs" />
+    <Compile Include="AppServices\RoleAppService.cs" />
     <Compile Include="Bases\AppServiceBase.cs" />
     <Compile Include="Bases\BaseRepository.cs" />
     <Compile Include="Bases\UnitOfWork.cs" />
+    <Compile Include="Configuration\MapperConfig.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
