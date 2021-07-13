@@ -75,10 +75,10 @@ namespace Data_Access_Layer__DAL_
 
     public class ApplicationDBContext : IdentityDbContext<AppIdentityUser>
     {
-        
-        //"Data Source=.;Initial Catalog=ECommDB; Integrated Security=True"
-            
-        public ApplicationDBContext() : base(@"Data Source=DESKTOP-7U1FJEF\SQLSERVERMARK;Initial Catalog='Final-eCommerce';Integrated Security=True")
+
+        //"Data Source=.;Initial Catalog=Final-eCommerce; Integrated Security=True"
+
+        public ApplicationDBContext() : base("Data Source=.;Initial Catalog=Final-ECommerce;Integrated Security=True")
         {
 
         }
