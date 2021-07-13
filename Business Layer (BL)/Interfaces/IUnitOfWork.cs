@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Business_Layer__BL_.Interfaces
 {
     // created ...mark
-    interface IUnitOfWork:IDisposable
+    public interface IUnitOfWork:IDisposable
     {
         int Commit();
 

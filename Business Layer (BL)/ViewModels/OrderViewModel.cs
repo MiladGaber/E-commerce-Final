@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.ViewModels
 {
-    class OrderViewModel
+    public class OrderViewModel
     {   //need to adding some validations
         public int Id { get; set; }
 

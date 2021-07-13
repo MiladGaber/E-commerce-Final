@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.Repositories
 {
-    class CategoryRepository : BaseRepository<Category>
+    public class CategoryRepository : BaseRepository<Category>
     {
         private DbContext EC_DbContext;
 

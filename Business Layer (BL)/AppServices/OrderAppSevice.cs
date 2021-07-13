@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Business_Layer__BL_.AppServices
 {
     //created ...mark
-    class OrderAppSevice:AppServiceBase
+    public class OrderAppSevice : AppServiceBase
     {
         //CURD
 

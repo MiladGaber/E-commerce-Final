@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Business_Layer__BL_.Repositories
 {
     // created ...mark
-    class RoleRepository
+    public class RoleRepository
     {
         AppRoleManager manager;
         public RoleRepository(DbContext db)

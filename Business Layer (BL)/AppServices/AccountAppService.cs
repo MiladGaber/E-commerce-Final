@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.AppServices
 {
-    class AccountAppService:AppServiceBase
+    public class AccountAppService:AppServiceBase
     {
         //created ...mark
         //Login

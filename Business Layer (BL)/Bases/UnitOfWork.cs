@@ -12,7 +12,7 @@ namespace Business_Layer__BL_.Bases
 
     //created...mark
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         #region Common Properties
         private DbContext EC_DbContext { get; set; }

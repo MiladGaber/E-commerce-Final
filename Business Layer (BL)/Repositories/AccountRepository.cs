@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Business_Layer__BL_.Repositories
 {
     //created by ...mark
-    class AccountRepository
+    public class AccountRepository
     {
         AppUserManager manager;
 

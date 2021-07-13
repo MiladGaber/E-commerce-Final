@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Business_Layer__BL_.AppServices
 {
     //Created...mark
-    class RoleAppService:AppServiceBase
+    public class RoleAppService:AppServiceBase
     {
         public IdentityResult Create(string rolename)
         {

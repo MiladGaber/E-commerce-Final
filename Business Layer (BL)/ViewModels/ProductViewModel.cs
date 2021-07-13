@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.ViewModels
 {
-    class ProductViewModel
+    public class ProductViewModel
     {
         public int Id { get; set; }
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.Bases
 {
-    class AppServiceBase
+    public class AppServiceBase
     {
         //created...mark
 

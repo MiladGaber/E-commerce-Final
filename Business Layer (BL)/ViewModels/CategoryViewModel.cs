@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.ViewModels
 {
-    class CategoryViewModel
+    public class CategoryViewModel
     {
         public int Id { get; set; }
         public string name { get; set; }

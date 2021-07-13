@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.ViewModels
 {
-    class RegisterViewModel
+    public class RegisterViewModel
     {
         [Required]
         public string UserName { get; set; }

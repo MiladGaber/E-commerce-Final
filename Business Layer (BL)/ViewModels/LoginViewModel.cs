@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.ViewModels
 {
-    class LoginViewModel
+    public class LoginViewModel
     {
         public int Id { get; set; }
 

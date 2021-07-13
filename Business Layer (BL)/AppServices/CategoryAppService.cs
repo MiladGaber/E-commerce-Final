@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.AppServices
 {
-    class CategoryAppService:AppServiceBase
+    public class CategoryAppService:AppServiceBase
     {
         //created ....mark
         //CURD
