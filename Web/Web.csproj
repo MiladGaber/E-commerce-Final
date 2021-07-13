@@ -202,6 +202,10 @@
     <Content Include="Views\Order\Details.cshtml" />
     <Content Include="Views\Order\Update.cshtml" />
     <Content Include="Views\Order\Delete.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Update.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
