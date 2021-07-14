@@ -13,20 +13,24 @@ namespace Web.Controllers
     {
         ProductAppService productAppService = new ProductAppService();
 
-        // GET: Product
+        //Alow For all
+        #region Get All
         public ActionResult Index()
         {
             return View(productAppService.GetAllProduct());
         }
+        #endregion
 
-
-
+        //Allow for all
+        #region Show Details
         public ActionResult Details(int id)
         {
             return View(productAppService.GetProduct(id));
         }
+        #endregion //All
 
-
+        //Allow for Admin
+        #region Create New
         [Authorize]
         public ActionResult Create() => View();
 
@@ -54,8 +58,10 @@ namespace Web.Controllers
             }
 
         }
+        #endregion
 
-
+        //Allow for Admin
+        #region Update
         [Authorize]
         public ActionResult Update(int id)
         {
@@ -66,22 +72,41 @@ namespace Web.Controllers
         [HttpPost]
         public ActionResult Update(int id, ProductViewModel product)
         {
-            try
-            {
-                productAppService.UpdateOrder(product);
-                return RedirectToAction("Index");
-            }
-            catch
+            if (!ModelState.IsValid)
             {
                 return View();
             }
+            else
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(product);
+                }
+                else
+                {
+                    try
+                    {
+                        productAppService.UpdateOrder(product);
+                        return RedirectToAction("Index");
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", ex.Message);
+                        return View(product);
+                    }
+                }
+            }
         }
+        #endregion
 
+        //Allow For Admin
+        #region Delete
         [Authorize]
         public ActionResult Delete(int id)
         {
             productAppService.DeleteOrder(id);
             return RedirectToAction("Index");
-        }
+        } 
+        #endregion
     }
 }

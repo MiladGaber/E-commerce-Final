@@ -8,86 +8,90 @@ using System.Web.Mvc;
 
 namespace Web.Controllers
 {
-    public class OrderController : Controller
+    [Authorize]
+    public class CategoryController : Controller
     {
+        CategoryAppService categoryAppService = new CategoryAppService();
 
-        OrderAppSevice orderAppSevice = new OrderAppSevice();
-
-        //Allow for user
+        //Allow For All
         #region Get All
+        [AllowAnonymous]
         public ActionResult Index()
         {
-            return View(orderAppSevice.GetAllOrder());
+            return View(categoryAppService.GetAllCategory());
         }
         #endregion
 
-        //Allow for user
+        //Allow for All
+        #region Show Details
+        [AllowAnonymous]
+        public ActionResult Details(int id)
+        {
+            return View(categoryAppService.GetCategory(id));
+        }
+        #endregion
+
+        //Allow For Admin
         #region Create New
         public ActionResult Create() => View();
 
         [HttpPost]
-        public ActionResult Create(OrderViewModel order)
+        public ActionResult Create(CategoryViewModel category)
         {
             if (!ModelState.IsValid)
             {
-                return View(order);
+                return View(category);
             }
             else
             {
                 try
                 {
-                    orderAppSevice.SaveNewOrder(order);
+                    categoryAppService.SaveNewCategory(category);
                     return RedirectToAction("Index");
                 }
                 catch (Exception ex)
                 {
+
                     ModelState.AddModelError("", ex.Message);
-                    return View(order);
+                    return View(category);
                 }
             }
         }
         #endregion
 
-        //Allow for user
-        #region Details
-        public ActionResult Details(int id)
-        {
-            return View(orderAppSevice.GetOrder(id));
-        }
-        #endregion
-
-        //Allow for user
+        //Allow For Admin
         #region Update
         public ActionResult Update(int id) => View();
 
         [HttpPost]
-        public ActionResult Update(int id, OrderViewModel order)
+        public ActionResult Update(int id, CategoryViewModel category)
         {
             if (!ModelState.IsValid)
             {
-                return View(order);
+                return View(category);
             }
             else
             {
                 try
                 {
-                    orderAppSevice.UpdateOrder(order);
+                    categoryAppService.UpdateCategory(category);
                     return RedirectToAction("Index");
                 }
                 catch (Exception ex)
                 {
+
                     ModelState.AddModelError("", ex.Message);
-                    return View(order);
+                    return View(category);
                 }
             }
         }
         #endregion
 
-        //Allow for user
+        //Allow For All
         #region Delete
         public ActionResult Delete(int id)
         {
-            orderAppSevice.DeleteOrder(id);
+            categoryAppService.DeleteCategory(id);
             return RedirectToAction("Index");
         } 
         #endregion
