@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Web.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class CategoryController : Controller
     {
         CategoryAppService categoryAppService = new CategoryAppService();
@@ -33,7 +33,7 @@ namespace Web.Controllers
 
         //Allow For Admin
         #region Create New
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         public ActionResult Create() => View();
 
         [HttpPost]

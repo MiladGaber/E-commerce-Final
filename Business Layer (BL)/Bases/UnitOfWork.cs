@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business_Layer__BL_.Bases
 
-    //created...mark
+   //created by..... mark
 {
     public class UnitOfWork : IUnitOfWork
     {
@@ -21,8 +21,7 @@ namespace Business_Layer__BL_.Bases
 
         public UnitOfWork()
         {
-            EC_DbContext = new ApplicationDBContext();//
-            // Avoid load navigation properties
+            EC_DbContext = new ApplicationDBContext();
             EC_DbContext.Configuration.LazyLoadingEnabled = false;
         }
 
@@ -77,11 +76,11 @@ namespace Business_Layer__BL_.Bases
         {
             get
             {
-                if (Product == null)
+                if (product == null)
                 {
                     product = new ProductRepository(EC_DbContext);
                 }
-                return Product;
+                return product;
             }
         }
 
@@ -90,11 +89,11 @@ namespace Business_Layer__BL_.Bases
         {
             get
             {
-                if (Category == null)
+                if (category == null)
                 {
                     category = new CategoryRepository(EC_DbContext);
                 }
-                return Category;
+                return category;
             }
         }
 
