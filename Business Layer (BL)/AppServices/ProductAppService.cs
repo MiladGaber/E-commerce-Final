@@ -29,7 +29,7 @@ namespace Business_Layer__BL_.AppServices
         public bool SaveNewOrder(ProductViewModel ProductViewModel)
         {
             bool result = false;
-            var Product = Mapper.Map<product>(ProductViewModel);
+            var Product = Mapper.Map<Product>(ProductViewModel);
             if (TheUnitOfWork.Product.Insert(Product))
             {
                 result = TheUnitOfWork.Commit() > new int();
@@ -40,7 +40,7 @@ namespace Business_Layer__BL_.AppServices
 
         public bool UpdateOrder(ProductViewModel ProductViewModel)
         {
-            var Product = Mapper.Map<product>(ProductViewModel);
+            var Product = Mapper.Map<Product>(ProductViewModel);
             TheUnitOfWork.Product.Update(Product);
             TheUnitOfWork.Commit();
 
@@ -60,7 +60,7 @@ namespace Business_Layer__BL_.AppServices
 
         public bool CheckOrderExists(ProductViewModel ProductViewModel)
         {
-            product product = Mapper.Map<product>(ProductViewModel);
+            Product product = Mapper.Map<Product>(ProductViewModel);
             return TheUnitOfWork.Product.CheckProductExists(product);
         }
     }

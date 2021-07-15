@@ -17,12 +17,16 @@ namespace Business_Layer__BL_.Repositories
         {
             this.EC_DbContext = EC_DbContext;
         }
+
+
+
         #region CRUB
 
         public List<Category> GetAllCategory()//name modified to GetAllCategory ...mark
         {
             return GetAll().ToList();
         }
+
 
         public bool InsertCategory(Category category)
         {

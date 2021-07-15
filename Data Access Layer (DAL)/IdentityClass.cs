@@ -19,8 +19,6 @@ namespace Data_Access_Layer__DAL_
         public AppUserStore(DbContext d) : base(d) { }
     }
 
-
-
     public class AppUserManager : UserManager<AppIdentityUser>
     {
         public AppUserManager() : base(new AppUserStore()) { }
@@ -48,7 +46,7 @@ namespace Data_Access_Layer__DAL_
         public int totalPrice { get; set; }
         public int discount { get; set; }
         // public Category category { get; set; }  //(removed relation)..Y
-        public virtual ICollection<product> product { get; set; }
+        public virtual ICollection<Product> product { get; set; }
         public virtual AppIdentityUser appUser { get; set; }
     }
 
@@ -57,10 +55,10 @@ namespace Data_Access_Layer__DAL_
         public int Id { get; set; }
         public string name { get; set; }
         public string img { get; set; }
-        public virtual ICollection<product> product { get; set; }
+        public virtual ICollection<Product> product { get; set; }
     }
 
-    public class product 
+    public class Product 
     {
         public int Id { get; set; }
         public string name { get; set; }
@@ -68,7 +66,7 @@ namespace Data_Access_Layer__DAL_
         public int price { get; set; }
         public int discount { get; set; }
         public string img { get; set; }
-        public virtual Order order { get; set; }
+        public virtual Order order { get; set; } // Why ???  
         public virtual Category category { get; set; }
 
     }
@@ -82,8 +80,8 @@ namespace Data_Access_Layer__DAL_
         {
 
         }
-        public virtual DbSet<product> Products { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }    //updated class Name from products to Products
+        public virtual DbSet<Order> Orders { get; set; }    
         public virtual DbSet<Category> Categories { get; set; }  // updated from types to Categories  ..Milad
     }
 }

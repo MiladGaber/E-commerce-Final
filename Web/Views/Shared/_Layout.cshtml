@@ -33,25 +33,31 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("LogOut", "Logout", "Account" ,null, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Registration", "Register", "Account", null, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Login", "Login", "Account" , null,new { @class = "nav-link" })</li>
+                    }
 
                     @*@if (User.Identity.IsAuthenticated)
-                    {*@
+                    {
                         <li class="nav-item">
                             @Html.ActionLink("Logout", "Logout", "Account", new { @class = "nav-link" })
                         </li>
-                    @*}
+                    }
                     else
-                    {*@
+                    {
                         <li class="nav-item">
                             @Html.ActionLink("Registeration", "Register", "Account", new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
                             @Html.ActionLink("Login", "Login", "Account", new { @class = "nav-link" })
                         </li>
-                    @*}*@
+                    }*@
 
                 </ul>
                 <form class="d-flex">

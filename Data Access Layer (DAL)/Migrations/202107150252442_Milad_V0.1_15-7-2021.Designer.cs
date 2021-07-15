@@ -7,13 +7,13 @@ namespace Data_Access_Layer__DAL_.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class set : IMigrationMetadata
+    public sealed partial class Milad_V01_1572021 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(set));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Milad_V01_1572021));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107131934571_set"; }
+            get { return "202107150252442_Milad_V0.1_15-7-2021"; }
         }
         
         string IMigrationMetadata.Source

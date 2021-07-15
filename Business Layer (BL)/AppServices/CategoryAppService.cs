@@ -16,8 +16,9 @@ namespace Business_Layer__BL_.AppServices
 
         public List<CategoryViewModel> GetAllCategory()
         {
-
+            
             return Mapper.Map<List<CategoryViewModel>>(TheUnitOfWork.Category.GetAllCategory());
+            Console.WriteLine("hi from CategoryAppService");
         }
         public CategoryViewModel GetCategory(int id)
         {

@@ -36,16 +36,7 @@ namespace Business_Layer__BL_.Bases
             EC_DbContext.Dispose();
         }
 
-        public OrderRepository order;//=> throw new NotImplementedException();
-        public OrderRepository Order
-        {
-            get
-            {
-                if (order == null)
-                    order = new OrderRepository(EC_DbContext);
-                return order;
-            }
-        }
+        
 
         public AccountRepository account;//=> throw new NotImplementedException();
         public AccountRepository Account
@@ -69,7 +60,19 @@ namespace Business_Layer__BL_.Bases
             }
         }
 
-       public ProductRepository product;  // => throw new NotImplementedException();
+        public OrderRepository order;//=> throw new NotImplementedException();
+        public OrderRepository Order
+        {
+            get
+            {
+                if (order == null)
+                    order = new OrderRepository(EC_DbContext);
+                return order;
+            }
+        }
+
+
+        public ProductRepository product;  // => throw new NotImplementedException();
         public ProductRepository Product
         {
             get

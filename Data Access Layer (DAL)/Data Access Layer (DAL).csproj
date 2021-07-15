@@ -57,29 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityClass.cs" />
-    <Compile Include="Migrations\202107112129091_v1.cs" />
-    <Compile Include="Migrations\202107112129091_v1.Designer.cs">
-      <DependentUpon>202107112129091_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107121810375_v2.cs" />
-    <Compile Include="Migrations\202107121810375_v2.Designer.cs">
-      <DependentUpon>202107121810375_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107131224317_v3.cs" />
-    <Compile Include="Migrations\202107131224317_v3.Designer.cs">
-      <DependentUpon>202107131224317_v3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107131934571_set.cs" />
-    <Compile Include="Migrations\202107131934571_set.Designer.cs">
-      <DependentUpon>202107131934571_set.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107140621141_updateorder.cs" />
-    <Compile Include="Migrations\202107140621141_updateorder.Designer.cs">
-      <DependentUpon>202107140621141_updateorder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107140624294_update.cs" />
-    <Compile Include="Migrations\202107140624294_update.Designer.cs">
-      <DependentUpon>202107140624294_update.cs</DependentUpon>
+    <Compile Include="Migrations\202107150252442_Milad_V0.1_15-7-2021.cs" />
+    <Compile Include="Migrations\202107150252442_Milad_V0.1_15-7-2021.Designer.cs">
+      <DependentUpon>202107150252442_Milad_V0.1_15-7-2021.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,23 +69,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107112129091_v1.resx">
-      <DependentUpon>202107112129091_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107121810375_v2.resx">
-      <DependentUpon>202107121810375_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107131224317_v3.resx">
-      <DependentUpon>202107131224317_v3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107131934571_set.resx">
-      <DependentUpon>202107131934571_set.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107140621141_updateorder.resx">
-      <DependentUpon>202107140621141_updateorder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107140624294_update.resx">
-      <DependentUpon>202107140624294_update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107150252442_Milad_V0.1_15-7-2021.resx">
+      <DependentUpon>202107150252442_Milad_V0.1_15-7-2021.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

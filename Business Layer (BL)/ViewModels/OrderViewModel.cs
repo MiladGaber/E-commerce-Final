@@ -23,7 +23,7 @@ namespace Business_Layer__BL_.ViewModels
         [DataType(DataType.Currency)]//...mark
         public int totalPrice { get; set; } 
         public int? discount { get; set; }
-        public ICollection<product> product { get; set; }
+        public ICollection<Product> product { get; set; }
 
         //public Category category { get; set; } // (removed relation)...Y
     }

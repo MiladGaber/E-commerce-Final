@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Business_Layer__BL_.Repositories
 {
     // created by... mark..ta7yate
-    public  class ProductRepository : BaseRepository<product>
+    public  class ProductRepository : BaseRepository<Product>
     {
         private DbContext EC_DbContext;
         public ProductRepository(DbContext EC_DBContext):base(EC_DBContext)
@@ -19,16 +19,16 @@ namespace Business_Layer__BL_.Repositories
         }
 
         //CRUD operations
-        public List<product> GetAllProduct()
+        public List<Product> GetAllProduct()
         {
             return GetAll().ToList();
         }
 
-        public bool InsertProduct(product product)
+        public bool InsertProduct(Product product)
         {
             return Insert(product);
         }
-        public void UpdateProduct(product product)
+        public void UpdateProduct(Product product)
         {
             Update(product);
         }
@@ -37,11 +37,11 @@ namespace Business_Layer__BL_.Repositories
             Delete(id);
         }
 
-        public bool CheckProductExists(product product)
+        public bool CheckProductExists(Product product)
         {
             return GetAny(l => l.Id == product.Id);
         }
-        public product GetProductById(int id)
+        public Product GetProductById(int id)
         {
             return GetFirstOrDefault(l => l.Id == id);
         }

@@ -3,28 +3,53 @@ namespace Data_Access_Layer__DAL_.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class v1 : DbMigration
+    public partial class Milad_V01_1572021 : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Categories",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        name = c.String(),
+                        img = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Products",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        name = c.String(),
+                        description = c.String(),
+                        price = c.Int(nullable: false),
+                        discount = c.Int(nullable: false),
+                        img = c.String(),
+                        category_Id = c.Int(),
+                        order_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Categories", t => t.category_Id)
+                .ForeignKey("dbo.Orders", t => t.order_Id)
+                .Index(t => t.category_Id)
+                .Index(t => t.order_Id);
+            
             CreateTable(
                 "dbo.Orders",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         date = c.String(),
-                        Description = c.String(),
-                        price = c.Int(nullable: false),
+                        description = c.String(),
+                        totalPrice = c.Int(nullable: false),
                         discount = c.Int(nullable: false),
-                        stock = c.Int(nullable: false),
                         appUser_Id = c.String(maxLength: 128),
-                        type_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AspNetUsers", t => t.appUser_Id)
-                .ForeignKey("dbo.types", t => t.type_Id)
-                .Index(t => t.appUser_Id)
-                .Index(t => t.type_Id);
+                .Index(t => t.appUser_Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -85,15 +110,6 @@ namespace Data_Access_Layer__DAL_.Migrations
                 .Index(t => t.RoleId);
             
             CreateTable(
-                "dbo.types",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        name = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
                 "dbo.AspNetRoles",
                 c => new
                     {
@@ -108,26 +124,29 @@ namespace Data_Access_Layer__DAL_.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Orders", "type_Id", "dbo.types");
+            DropForeignKey("dbo.Products", "order_Id", "dbo.Orders");
             DropForeignKey("dbo.Orders", "appUser_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Products", "category_Id", "dbo.Categories");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.Orders", new[] { "type_Id" });
             DropIndex("dbo.Orders", new[] { "appUser_Id" });
+            DropIndex("dbo.Products", new[] { "order_Id" });
+            DropIndex("dbo.Products", new[] { "category_Id" });
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.types");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.Orders");
+            DropTable("dbo.Products");
+            DropTable("dbo.Categories");
         }
     }
 }
