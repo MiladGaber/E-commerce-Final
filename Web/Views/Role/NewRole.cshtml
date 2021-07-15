@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "NewRole";
+}
+
+
+
+
+@{ ViewBag.Title = "NewRole"; }
+
+<h2>NewRole</h2>
+
+@using (Html.BeginForm())
+{
+<div class="text-danger">
+    @if (ViewBag.Status != null)
+    {
+<div>@ViewBag.Status</div>}
+</div>
+  @Html.Label("Role Name")
+   @Html.Editor("RoleName")
+    <input type="submit" value="create" />}

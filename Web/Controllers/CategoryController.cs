@@ -33,6 +33,7 @@ namespace Web.Controllers
 
         //Allow For Admin
         #region Create New
+        [Authorize(Roles = "Admin")]
         public ActionResult Create() => View();
 
         [HttpPost]
@@ -61,9 +62,11 @@ namespace Web.Controllers
 
         //Allow For Admin
         #region Update
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id) => View();
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id, CategoryViewModel category)
         {
             if (!ModelState.IsValid)
@@ -89,6 +92,7 @@ namespace Web.Controllers
 
         //Allow For All
         #region Delete
+        [Authorize]
         public ActionResult Delete(int id)
         {
             categoryAppService.DeleteCategory(id);
