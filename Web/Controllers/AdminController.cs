@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace Web.Controllers
 {
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         public class AdminController : Controller
         {
 
