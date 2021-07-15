@@ -31,11 +31,13 @@ namespace Web.Controllers
 
         //Allow for Admin
         #region Create New
-        [Authorize]
+       
+        [Authorize(Roles = "Admin")]
         public ActionResult Create() => View();
 
         // POST: Product2/Create
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(ProductViewModel product)
         {
 
@@ -62,7 +64,8 @@ namespace Web.Controllers
 
         //Allow for Admin
         #region Update
-        [Authorize]
+        
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id)
         {
             return View();
@@ -101,7 +104,7 @@ namespace Web.Controllers
 
         //Allow For Admin
         #region Delete
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
         {
             productAppService.DeleteOrder(id);
