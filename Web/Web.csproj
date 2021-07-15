@@ -190,6 +190,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\images\image-best-gear.jpg" />
+    <Content Include="Content\images\image-speaker-zx9.png" />
     <Content Include="Content\javascript\app.js" />
     <Content Include="Content\styling\style.css" />
     <Content Include="favicon.ico" />
@@ -273,6 +275,8 @@
     <Content Include="Views\Admin\Orders.cshtml" />
     <Content Include="Views\Role\NewRole.cshtml" />
     <Content Include="Views\Admin\Register.cshtml" />
+    <Content Include="Views\Shared\_orangeSpeaker.cshtml" />
+    <Content Include="Views\Shared\_boySection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
