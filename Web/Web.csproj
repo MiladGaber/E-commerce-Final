@@ -193,6 +193,7 @@
     <Content Include="Content\images\image-best-gear.jpg" />
     <Content Include="Content\images\image-speaker-zx9.png" />
     <Content Include="Content\images\image-xx99-mark-two-headphones.jpg" />
+    <Content Include="Content\images\image-yx1-earphones.jpg" />
     <Content Include="Content\images\logo.svg" />
     <Content Include="Content\javascript\app.js" />
     <Content Include="Content\styling\style.css" />
@@ -281,6 +282,9 @@
     <Content Include="Views\Shared\_orangeSpeaker.cshtml" />
     <Content Include="Views\Shared\_boySection.cshtml" />
     <Content Include="Views\Shared\_homeHeader.cshtml" />
+    <Content Include="Views\Shared\_Product1.cshtml" />
+    <Content Include="Views\Shared\_product2.cshtml" />
+    <Content Include="Views\Shared\_homeElement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
