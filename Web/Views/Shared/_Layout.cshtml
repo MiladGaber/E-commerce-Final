@@ -52,9 +52,9 @@
         </div>
     </nav>
 
-    <div class="my-4">
+   
         @RenderBody()
-    </div>
+   
         <footer>
             <div class="container">
                 <div class="info">
@@ -111,18 +111,3 @@
 
 
 
-@if (User.Identity.IsAuthenticated)
-{
-    
-        @Html.ActionLink("Logout", "Logout", "Account", new { @class = "btn btn - outline - primary me - 2" })
-    
-}
-else
-{
-    
-        @Html.ActionLink("Registeration", "Register", "Account", new { @class = "btn btn - outline - primary me - 2" })
-   
-    
-        @Html.ActionLink("Login", "Login", "Account", new { @class = "btn btn - outline - primary me - 2" })
-   
-}

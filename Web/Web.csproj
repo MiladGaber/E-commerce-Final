@@ -278,6 +278,7 @@
     <Content Include="Views\Admin\Register.cshtml" />
     <Content Include="Views\Shared\_orangeSpeaker.cshtml" />
     <Content Include="Views\Shared\_boySection.cshtml" />
+    <Content Include="Views\Shared\_homeHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
