@@ -194,6 +194,7 @@
     <Content Include="Content\images\image-speaker-zx9.png" />
     <Content Include="Content\javascript\app.js" />
     <Content Include="Content\styling\style.css" />
+    <Content Include="Content\styling\style_layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
