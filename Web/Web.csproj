@@ -286,6 +286,7 @@
     <Content Include="Views\Shared\_Product1.cshtml" />
     <Content Include="Views\Shared\_product2.cshtml" />
     <Content Include="Views\Shared\_homeElement.cshtml" />
+    <Content Include="Views\Shared\_productNav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
