@@ -24,26 +24,27 @@
                     <img src="./public/shared/desktop/logo.svg" alt="">
                 </a>
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#" class="nav-link">HEADPHONES</a></li>
-                    <li><a href="#" class="nav-link">EARPHONES</a></li>
-                    <li><a href="#" class="nav-link">EARPHONES</a></li>
+                    <li>  @Html.ActionLink("Home", "Index", "product", null, new { @class = "nav-link active" })</li>
+                    <li>  @Html.ActionLink("HEADPHONES", "Index", "product", null, new { @class = "nav-link active" })</li>
+                      <li> @Html.ActionLink("EARPHONES", "Index", "product", null, new { @class = "nav-link active" })</li>
+                     <li>   @Html.ActionLink("SPEAKERS", "Index", "product", null, new { @class = "nav-link active" })</li> 
+                    
                 </ul>
                 <div class="col-md-3 text-end">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        @Html.ActionLink("LogOut", "Logout", "Account", null, new { @class = "btn btn - outline - primary me - 2 mx-2" })
+                        @Html.ActionLink("LogOut", "Logout", "Account", null, new { @class = "btn btn - outline - primary me - 2 mx-1" })
                     }
                     else
                     {
-                        @Html.ActionLink("Sign-up", "Register", "Account", null, new { @class = "btn btn - outline - primary me - 2 mx-2" })
-                        @Html.ActionLink("Sign-in", "Login", "Account", null, new { @class = "btn btn - outline - primary me - 2 mx-2" })
+                        @Html.ActionLink("Sign-up", "Register", "Account", null, new { @class = "btn btn - outline - primary me - 2 mx-1" })
+                        @Html.ActionLink("Sign-in", "Login", "Account", null, new { @class = "btn btn - outline - primary me - 2 mx-1" })
                     }
                     @if (User.IsInRole("Admin"))
                     {
-                        @Html.ActionLink("+ dmin", "Register", "Admin", null, new { @class = "btn btn - outline - primary me - 2 mx-2" })
-                        @Html.ActionLink("+ Product", "create", "Product", null, new { @class = "btn btn - outline - primary me - 2 mx-2" })
-                        @Html.ActionLink("+ Category", "create", "category", null, new { @class = "btn btn - outline - primary me - 2 mx-2" })
+                        @Html.ActionLink("+ dmin", "Register", "Admin", null, new { @class = "btn btn - outline - primary me - 2 mx-1" })
+                        @Html.ActionLink("+ Product", "create", "Product", null, new { @class = "btn btn - outline - primary me - 2 mx-1" })
+                        @Html.ActionLink("+ Category", "create", "category", null, new { @class = "btn btn - outline - primary me - 2 mx-1" })
 
                     }
                 </div>
