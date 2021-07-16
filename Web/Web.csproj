@@ -191,8 +191,12 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\images\image-best-gear.jpg" />
+    <Content Include="Content\images\image-earphones-yx1.jpg" />
+    <Content Include="Content\images\image-earphones.png" />
+    <Content Include="Content\images\image-headphones.png" />
     <Content Include="Content\images\image-speaker-zx7.jpg" />
     <Content Include="Content\images\image-speaker-zx9.png" />
+    <Content Include="Content\images\image-speakers.png" />
     <Content Include="Content\images\image-xx99-mark-two-headphones.jpg" />
     <Content Include="Content\images\image-yx1-earphones.jpg" />
     <Content Include="Content\images\logo.svg" />
@@ -287,6 +291,8 @@
     <Content Include="Views\Shared\_product2.cshtml" />
     <Content Include="Views\Shared\_homeElement.cshtml" />
     <Content Include="Views\Shared\_productNav.cshtml" />
+    <Content Include="Views\Shared\_earPhoneSection.cshtml" />
+    <Content Include="Views\Shared\_coverDiv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
