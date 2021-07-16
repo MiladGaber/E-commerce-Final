@@ -192,6 +192,8 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\images\image-best-gear.jpg" />
     <Content Include="Content\images\image-speaker-zx9.png" />
+    <Content Include="Content\images\image-xx99-mark-two-headphones.jpg" />
+    <Content Include="Content\images\logo.svg" />
     <Content Include="Content\javascript\app.js" />
     <Content Include="Content\styling\style.css" />
     <Content Include="Content\styling\style_layout.css" />
