@@ -19,7 +19,8 @@
             <div class="card-body">
                 <div class="card-body h3 text-center py-2"> Categories<h1 class="my-2">@TotalCategories</h1> </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    @Html.ActionLink("View Details", "Categories", "Admin", null, new { @class = "small text-white stretched-link" })
+
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
@@ -30,7 +31,7 @@
             <div class="card-body">
                 <div class="card-body h3 text-center py-2"> Products<h1 class="my-2">@TotalProducts</h1> </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    @Html.ActionLink("View Details", "Products", "Admin", null, new { @class = "small text-white stretched-link" })
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
@@ -41,7 +42,7 @@
             <div class="card-body">
                 <div class="card-body h3 text-center py-2"> Orders<h1 class="my-2">@TotalOrders</h1> </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    @Html.ActionLink("View Details", "Orders", "Admin", null, new { @class = "small text-white stretched-link" })
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>

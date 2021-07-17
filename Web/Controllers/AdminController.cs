@@ -50,12 +50,12 @@ namespace Web.Controllers
 
         public ActionResult Products()
         {
-            return View(categoryAppService.GetAllCategory());
+            return View(productAppService.GetAllProduct());
         }
 
         public ActionResult Orders()
         {
-            return View(categoryAppService.GetAllCategory());
+            return View(orderAppSevice.GetAllOrder());
         }
 
         public ActionResult Register() => View();
