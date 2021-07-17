@@ -1,8 +1,49 @@
 ﻿
+
 @{
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    int TotalCategories = @ViewBag.TotalCategories;
+    int TotalProducts = @ViewBag.TotalProducts;
+    int TotalOrders = @ViewBag.TotalOrders;
+
+
 }
 
-<h2>Dashboard</h2>
 
+<div class="row">
+
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4">
+            <div class="card-body">
+                <div class="card-body h3 text-center py-2"> Categories<h1 class="my-2">@TotalCategories</h1> </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4">
+            <div class="card-body">
+                <div class="card-body h3 text-center py-2"> Products<h1 class="my-2">@TotalProducts</h1> </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4">
+            <div class="card-body">
+                <div class="card-body h3 text-center py-2"> Orders<h1 class="my-2">@TotalOrders</h1> </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
