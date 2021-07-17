@@ -19,7 +19,6 @@ namespace Web.Controllers
 
 
         AccountAppService accountAppService = new AccountAppService();
-
         CategoryAppService categoryAppService = new CategoryAppService();
         ProductAppService productAppService = new ProductAppService();
         OrderAppSevice orderAppSevice = new OrderAppSevice();
@@ -37,16 +36,87 @@ namespace Web.Controllers
             ViewBag.TotalCategories = categoryAppService.GetAllCategory().Count;
             ViewBag.TotalProducts = productAppService.GetAllProduct().Count;
             ViewBag.TotalOrders = orderAppSevice.GetAllOrder().Count;
-
             return View();
-            
         }
 
-        [AllowAnonymous]
+        //******************************* Start Categories Actions ******************************//
+
+        // Show All Categories in table
         public ActionResult Categories()
         {
             return View(categoryAppService.GetAllCategory());
         }
+
+        public ActionResult CategoryDetails(int id)
+        {
+            return View(categoryAppService.GetCategory(id));
+        }
+
+        [AllowAnonymous]
+        //  [Authorize(Roles = "Admin")]
+        public ActionResult CreateCategory() => View();
+
+        [HttpPost]
+        public ActionResult CreateCategory(CategoryViewModel category)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(category);
+            }
+            else
+            {
+                try
+                {
+                    categoryAppService.SaveNewCategory(category);
+                    return RedirectToAction("Categories");
+                }
+                catch (Exception ex)
+                {
+
+                    ModelState.AddModelError("", ex.Message);
+                    return View(category);
+                }
+            }
+        }
+        //Allow For Admin
+        //[Authorize(Roles = "Admin")]
+        public ActionResult UpdateCategory(int id) => View();
+
+        [HttpPost]
+        //[Authorize(Roles = "Admin")]
+        public ActionResult UpdateCategory(int id, CategoryViewModel category)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(category);
+            }
+            else
+            {
+                try
+                {
+                    categoryAppService.UpdateCategory(category);
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+
+                    ModelState.AddModelError("", ex.Message);
+                    return View(category);
+                }
+            }
+        }
+
+        //Allow For All
+        //[Authorize]
+        public ActionResult DeleteCategory(int id)
+        {
+            categoryAppService.DeleteCategory(id);
+            return RedirectToAction("Index");
+        }
+
+
+        //**************************** End Categories Actions ******************************//
+
 
         public ActionResult Products()
         {

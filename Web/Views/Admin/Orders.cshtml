@@ -6,6 +6,13 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+
+<ol class="breadcrumb  mb-4">
+    <li class="breadcrumb-item">
+        @Html.ActionLink("Dashboard", "Dashboard", "Admin")
+    </li>
+    <li class="breadcrumb-item active">Orders</li>
+</ol>
 <h2>Orders</h2>
 
 <p>
